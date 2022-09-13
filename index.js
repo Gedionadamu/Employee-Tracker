@@ -225,8 +225,8 @@ function viewEmployees() {
             throw err
         };
 
-
-        console.table(response);
+        console.log(response);
+        cTab(response);
         questions();
     });
 }
@@ -259,8 +259,8 @@ function viewRoles() {
             throw err
         };
 
-
-        console.table(response);
+        console.log(response)
+        cTab(response);
         questions();
     });
 }
