@@ -1,19 +1,20 @@
-import inquirer from 'inquirer'
-import mysql from 'mysql2';
-import cTab from "console.table"
+const inquirer = require ('inquirer')
+const mysql = require('mysql2');
+const cTab = require ("console.table");
 const connection = mysql.createConnection({
     host: "localhost:3306",
     user: "root",
     password: "rootroot",
     database: "employee_db",
 
-}, 
-console.log('connected with the employee database'))
+}) 
+
 
 connection.connect(function (response, err) {
     if (err) {
         throw err
     }
+    console.log('connected with the employee database')
     questions();
 })
 async function questions() {
