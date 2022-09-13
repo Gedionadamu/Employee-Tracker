@@ -1,8 +1,8 @@
 const inquirer = require ('inquirer')
 const mysql = require('mysql2');
-const cTab = require ("console.table");
+ require ("console.table");
 const connection = mysql.createConnection({
-    host: "localhost:3306",
+    host: "localhost",
     user: "root",
     password: "rootroot",
     database: "employee_db",
@@ -10,13 +10,8 @@ const connection = mysql.createConnection({
 }) 
 
 
-connection.connect(function (response, err) {
-    if (err) {
-        throw err
-    }
-    console.log('connected with the employee database')
-    questions();
-})
+
+questions();
 async function questions() {
     const answers = await inquirer.prompt([{
         type: "list",
@@ -227,7 +222,7 @@ function viewEmployees() {
         };
 
         console.log(response);
-        cTab(response);
+        console.table(response);
         questions();
     });
 }
@@ -261,7 +256,7 @@ function viewRoles() {
         };
 
         console.log(response)
-        cTab(response);
+        console.table(response);
         questions();
     });
 }
