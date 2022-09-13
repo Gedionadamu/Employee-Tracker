@@ -1,12 +1,30 @@
-# Employee-Tracker
-```
-User Story
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
-```
 
-Acceptance Criteria
+
+  # EMPLOYEE TRACKER
+
+  []()   
+  ![](https://img.shields.io/badge/license--green.svg)  
+
+## Discription
+
+  A  terminal based employee managment system using MYSQL to view manage and organise your buisness
+
+
+# Table of contents
+
+1. [Installation](#Installation)
+2. [How to Use](#How-To-Use.)
+3. [License](#License)
+4. [Contributing Guidelines](#Contrubuting-Guidelines)  
+5. [Tests](#Tests)
+6. [Questions](#Questions)
+
+# 1. Installation
+
+  MYSQL2, INQUIRER
+
+# How To Use.
+
 ```
 GIVEN a command-line application that accepts user input
 WHEN I start the application
@@ -26,3 +44,33 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 ```
+
+
+Here below is the demostration for the application.
+
+https://www.youtube.com/watch?v=xdCakKrNfuI
+  
+
+# License
+
+  ## This Project is licensed under  license.
+
+  
+
+# Contrubuting Guidelines
+
+  none
+
+# Tests
+
+To run test, run the following comands :-  
+
+   none
+
+
+# Questions
+
+  If you have any question please contact me using the following :-   
+  Github :- https://github.com/Gedionadamu/Employee-Tracker   
+  Email:- Gedionadamu@gmail.com
+
