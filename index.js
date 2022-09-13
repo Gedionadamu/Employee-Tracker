@@ -4,9 +4,11 @@ import cTab from "console.table"
 const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    database: "employee_database",
+    password: "rootroot",
+    database: "employee_db",
 
-})
+}, 
+console.log('connected with the employee database'))
 
 connection.connect(function (response, err) {
     if (err) {
@@ -27,7 +29,7 @@ async function questions() {
             "Add Role",
             "Add Department",
             "Update Employee",
-            "Quit",
+            "Quit"
         ]
     },]).then((answers) => {
         switch (answers.choice) {
@@ -126,6 +128,7 @@ async function employeeAdd() {
             ]
         },
     ]);
+    console.log(answers)
     connection.query(`INSERT INTO employees(first_name, last_name, roles_id, manager_id) 
             VALUES ('${answers.firstName
         }', '${answers.lastName
@@ -208,6 +211,7 @@ async function departmentAdd() {
         });
 }
 function viewEmployees() {
+    console.log("lets see if it gets here")
     connection.query(`SELECT employees.id, employees.first_name, employees.last_name, roles.title_name, departments.department_name 
             AS departments, roles.salary, 
             CONCAT (managers.first_name, " ", managers.last_name) 
