@@ -2,7 +2,7 @@ import inquirer from 'inquirer'
 import mysql from 'mysql2';
 import cTab from "console.table"
 const connection = mysql.createConnection({
-    host: "localhost",
+    host: "localhost:3306",
     user: "root",
     password: "rootroot",
     database: "employee_db",
